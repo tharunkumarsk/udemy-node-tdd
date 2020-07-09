@@ -1,0 +1,23 @@
+{
+  "name": "udemy-node-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharunkumarsk/udemy-node-tdd.git"
+  },
+  "author": "Tharunkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tharunkumarsk/udemy-node-tdd/issues"
+  },
+  "homepage": "https://github.com/tharunkumarsk/udemy-node-tdd#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  }
+}
