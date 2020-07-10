@@ -21,3 +21,11 @@ it('should calculate total price for multiple items', function () {
     checkout.addItem("water");
     expect(checkout.calculateTotal()).to.equal(3);
 });
+
+it('should add discount to specific product', function () {
+    checkout.addDiscount("bread",3 ,2);
+    checkout.addItem("bread");
+    checkout.addItem("bread");
+    checkout.addItem("bread");
+    expect(checkout.calculateTotal()).to.equal(2);
+});
