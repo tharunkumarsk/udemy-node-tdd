@@ -8,15 +8,6 @@ beforeEach(function () {
 });
 
 
-it('should add item price', function () {
-    checkout.addItemPrice("bread",1);
-});
-
-it('should add an item', function () {
-
-    checkout.addItemPrice("bread" ,1);
-    checkout.addItem("bread");
-});
 
 it('should calculate total price', function () {
     checkout.addItemPrice("bread" ,1);
