@@ -29,3 +29,11 @@ it('should add discount to specific product', function () {
     checkout.addItem("bread");
     expect(checkout.calculateTotal()).to.equal(2);
 });
+
+it('should throw exception item without price', function () {
+    expect(function () {
+        checkout.addItem("tea")
+    }).to.throw();
+
+
+});
