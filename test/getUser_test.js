@@ -16,7 +16,7 @@ describe ('GetUsers tests', () => {
     beforeEach(function(){
         spyFn = sinon.spy();
         sinon.stub(request ,"get").callsFake(function(url,callback){
-            callback({},{body:{users :["Tharun","Jeevitha"]}});
+            callback({},{body:'{"users" :["Tharun","Jeevitha"]}'});
         });
     })
 
@@ -31,8 +31,12 @@ describe ('GetUsers tests', () => {
     });
 
     it ('Calls the corret URL', () => {
-        var spyFn = sinon.spy();
         getUsers(spyFn);
         request.get.should.have.been.calledOnceWith("https://www.mysite.com/api/users");
+    });
+
+    it ('Should return users from  API', () => {
+        getUsers(spyFn);
+        spyFn.should.have.been.calledOnceWith({users :["Tharun","Jeevitha"]})
     });
 });
