@@ -18,6 +18,9 @@
   "homepage": "https://github.com/tharunkumarsk/udemy-node-tdd#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "request": "^2.88.2",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0"
   }
 }
