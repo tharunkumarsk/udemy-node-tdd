@@ -8,6 +8,7 @@ var request = require("request");
 
 
 var getUsers = require("../src/getUsers/getUsers");
+const Sinon = require("sinon");
 
 describe ('GetUsers tests', () => {
     it ('calls  the callBack', () => {
@@ -15,5 +16,14 @@ describe ('GetUsers tests', () => {
         getUsers(spyFn);
         spyFn.should.have.been.calledOnce;
         
+    });
+
+    it ('Calls the corret URL', () => {
+        var spyFn = sinon.spy();
+        sinon.stub(request ,"get").callsFake(function(url,callback){
+            callback({},{body:{users :["Tharun","Jeevitha"]}});
+        });
+        getUsers(spyFn);
+        request.get.should.have.been.calledOnceWith("https://www.mysite.com/api/users");
     });
 });
