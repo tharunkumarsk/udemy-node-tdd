@@ -10,11 +10,6 @@ var request = require("request");
 var getUsers = require("../src/getUsers/getUsers");
 
 describe ('GetUsers tests', () => {
-    it('should call getUser', () => {
-        getUsers();
-        
-    });
-    
     it ('calls  the callBack', () => {
         var spyFn = sinon.spy();
         getUsers(spyFn);
