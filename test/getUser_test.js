@@ -14,4 +14,11 @@ describe ('GetUsers tests', () => {
         getUsers();
         
     });
+    
+    it ('calls  the callBack', () => {
+        var spyFn = sinon.spy();
+        getUsers(spyFn);
+        spyFn.should.have.been.calledOnce;
+        
+    });
 });
